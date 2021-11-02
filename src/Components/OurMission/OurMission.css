@@ -1,0 +1,12 @@
+.mission-text{
+    text-align: justify;
+    padding-top: 150px;
+    padding-right: 50px;
+    font-size: 20px;
+}
+
+@media  only screen and (max-width:688px){
+    .mission-text{
+        padding: 5px;
+    }
+}
