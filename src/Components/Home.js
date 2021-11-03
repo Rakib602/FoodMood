@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
-import ClientReview from './ClientReview';
+import ClientReview from './ClienReview/ClientReview';
 import Food from './FoodMenu/Food';
 import OurMission from './OurMission/OurMission';
 
