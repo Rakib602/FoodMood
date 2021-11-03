@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Card, Col, Form, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
@@ -13,7 +13,8 @@ const Booking = () => {
     const userNameRef = useRef();
     const emailRef = useRef();
     const phoneNumberRef = useRef();
-    const addressRef = useRef();
+  const addressRef = useRef();
+  const quantityRef = useRef();
     
 
 
@@ -25,10 +26,19 @@ const Booking = () => {
         const email = emailRef.current.value;
         const phoneNumber = phoneNumberRef.current.value;
         const address = addressRef.current.value;
+        const quantity = quantityRef.current.value;
 
         e.preventDefault();
 
-        const newOrder = { itemName, userName, email, address, phoneNumber }
+        const newOrder = {
+          itemName,
+          userName,
+          email,
+          address,
+          phoneNumber,
+          quantity,
+        
+        };
         fetch('http://localhost:4000/orders', {
             method: 'POST',
             headers: {
@@ -84,12 +94,11 @@ const Booking = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-            <form className="Order-form  m-3 shadow " onSubmit={handelOrder}>
-              <Row className="pt-3 ">
+          <Col className="pt-4 mb-3">
+            <form className="Order-form  shadow " onSubmit={handelOrder}>
+              <Row className="p-3 ">
                 <h3>Book your order</h3>
                 <Col xs={12} md={12} lg={12} className=" mx-auto m-2">
-                  Order ID:
                   <input
                     type="text"
                     defaultValue={foodId}
@@ -98,7 +107,6 @@ const Booking = () => {
                   />
                 </Col>
                 <Col xs={12} md={12} lg={12} className="mx-auto m-2">
-                  Item Name:
                   <input
                     type="text"
                     defaultValue={order?.name}
@@ -106,7 +114,6 @@ const Booking = () => {
                   />
                 </Col>
                 <Col xs={12} md={12} lg={12} className="mx-auto m-2">
-                  Customer Name:
                   <input
                     type="text"
                     defaultValue={user.displayName}
@@ -115,7 +122,6 @@ const Booking = () => {
                   />
                 </Col>
                 <Col xs={12} md={12} lg={12} className=" mx-auto m-2">
-                  Email:
                   <input
                     type="text"
                     defaultValue={user.email}
@@ -124,7 +130,6 @@ const Booking = () => {
                   />
                 </Col>
                 <Col xs={12} md={12} lg={12} className="mx-auto m-2">
-                  Phone Number:
                   <input
                     type="text"
                     required
@@ -132,8 +137,7 @@ const Booking = () => {
                     placeholder="Enter your phone number"
                   />
                 </Col>
-                <Col xs={12} md={12} lg={12} className=" m-2">
-                  Address:
+                <Col xs={12} md={12} lg={12} className=" mx-auto m-2">
                   <input
                     type="text"
                     required
@@ -141,8 +145,17 @@ const Booking = () => {
                     placeholder="Enter Your Current Address"
                   />
                 </Col>
+                <Col xs={12} md={12} lg={12} className=" mx-auto m-2">
+                  <input
+                    type="text"
+                    required
+                    ref={quantityRef}
+                    placeholder="Enter the quantity of food"
+                  />
+                </Col>
+               
               </Row>
-              <button className="btn btn-success m-2" type="submit">
+              <button className="btn btn-success mb-3" type="submit">
                 Order Now
               </button>
             </form>
