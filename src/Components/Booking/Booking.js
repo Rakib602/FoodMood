@@ -39,20 +39,20 @@ const Booking = () => {
           quantity,
         
         };
-        fetch('http://localhost:4000/orders', {
-            method: 'POST',
-            headers: {
-             'content-type': 'application/json'
-            },
-         body: JSON.stringify(newOrder)   
+        fetch("http://localhost:4000/orders", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newOrder),
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.insertedId) {
-                    alert('Ordered Booked Successfully')
-                    e.target.reset();
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.insertedId) {
+              alert("Ordered Booked Successfully");
+              e.target.reset();
             }
-        })
+          });
 }
 
     const {foodId}=useParams();
@@ -62,9 +62,9 @@ const Booking = () => {
 
 
     useEffect(()=> {
-        fetch('http://localhost:4000/foods')
-        .then(res=> res.json())
-        .then(data=> setOrders(data))
+        fetch("http://localhost:4000/foods")
+          .then((res) => res.json())
+          .then((data) => setOrders(data));
     },[])
 
     useEffect(()=>{

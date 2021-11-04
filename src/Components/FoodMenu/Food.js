@@ -6,9 +6,9 @@ const Food = () => {
    const [foods, setFoods] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/foods')
-            .then(res => res.json())
-        .then(data=>setFoods(data))
+        fetch("http://localhost:4000/foods")
+          .then((res) => res.json())
+          .then((data) => setFoods(data));
 
 
     },[])

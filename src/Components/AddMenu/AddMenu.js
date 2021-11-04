@@ -14,19 +14,19 @@ const AddMenu = () => {
         e.preventDefault();
         const newOrder = { name, price, img }
         fetch("http://localhost:4000/newfoods", {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newOrder)
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newOrder),
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.insertedId) {
-                    alert('Menu Added Successfully')
-                    e.target.reset();
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.insertedId) {
+              alert("Menu Added Successfully");
+              e.target.reset();
             }
-        })
+          });
     }
     return (
       <div className="container">

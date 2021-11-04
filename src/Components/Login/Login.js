@@ -97,7 +97,7 @@ const Login = () => {
     <div className="mt-3 pt-3 text-dark">
       <div className="login-registration-container m-3 p-3">
         <Row xs={1} md={2} lg={2} className="g-5 p-5">
-          /* form colum    */
+          
           <Col className="m-auto">
             <Card className="p-3 shadow">
               {/* form */}
