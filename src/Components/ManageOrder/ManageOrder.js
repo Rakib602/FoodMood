@@ -3,13 +3,13 @@ import { Table } from 'react-bootstrap';
 import { RiDeleteBin5Fill } from "react-icons/ri";
 const ManageOrder = () => {
     const [ordered, setOrderd] = useState([]);
-    // const [booked, setBooked] = useState([]);
+    
 
     useEffect(() => {
          fetch("http://localhost:4000/allorderd")
            .then(res => res.json())
               .then(data => setOrderd(data))
-        //    .then(data => setBooked(data));
+        
     },[])
     
     
@@ -29,7 +29,7 @@ const ManageOrder = () => {
                setOrderd(presentMenu);
              }
            });
-         // .then(data=>console.log(data))
+         
        }
      };
 
@@ -37,7 +37,7 @@ const ManageOrder = () => {
       <div className="text-white container ">
         <h2 className="text-success fw-bold m-2">
           ALL Order : {ordered.length}
-          {/* ALL Order : {booked.length} */}
+          
             </h2>
             
 
