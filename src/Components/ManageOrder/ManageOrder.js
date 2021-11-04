@@ -7,8 +7,8 @@ const ManageOrder = () => {
 
     useEffect(() => {
          fetch("http://localhost:4000/allorderd")
-           .then(res => res.json())
-              .then(data => setOrderd(data))
+           .then((res) => res.json())
+           .then((data) => setOrderd(data));
         
     },[])
     
@@ -25,7 +25,7 @@ const ManageOrder = () => {
            .then((data) => {
              if (data.deletedCount > 0) {
                alert("Deleted Successfully");
-               const presentMenu = ordered.filter(book => book._id !== id);
+               const presentMenu = ordered.filter((book) => book._id !== id);
                setOrderd(presentMenu);
              }
            });
