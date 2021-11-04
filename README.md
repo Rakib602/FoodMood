@@ -1,6 +1,6 @@
 # Welcome to FoodMood food delivary services
 
-Are you hungry? then no tension just our site and place your order. [Visit Live Site](https://food-mood-1467e.web.app/).
+Are you hungry? then no tension just go to our site and place your order. [Visit Live Site](https://food-mood-1467e.web.app/).
 
 ## What We Used in this website?
 
