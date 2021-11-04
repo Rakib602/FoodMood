@@ -3,17 +3,17 @@ import { Col, Row } from 'react-bootstrap';
 
 const AddMenu = () => {
      const nameRef = useRef();
-     const priceRef = useRef();
+     const pricesRef = useRef();
      const imgRef = useRef();
     
     const handelAddUser = e => {
         const name = nameRef.current.value;
-        const price = priceRef.current.value;
+        const prices = pricesRef.current.value;
         const img = imgRef.current.value;
 
         e.preventDefault();
-        const newOrder = { name, price, img }
-        fetch("http://localhost:4000/newfoods", {
+        const newOrder = { name, prices, img }
+        fetch("https://quiet-crag-48473.herokuapp.com/newfoods", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -45,8 +45,8 @@ const AddMenu = () => {
                 </Col>
                 <Col xs={12} md={12} lg={12} className="mx-auto m-2">
                   <input
-                    type="number"
-                    ref={priceRef}
+                    type="text"
+                    ref={pricesRef}
                     placeholder="Enter  the price of the food"
                   />
                 </Col>

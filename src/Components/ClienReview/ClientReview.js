@@ -4,7 +4,7 @@ import { Card, Col, Row } from "react-bootstrap";
 const ClientReview = () => {
   return (
     <div className="container">
-          <h3>Our Users Review</h3>
+          <h3>Our <span className='text-success'>Users</span> Review</h3>
           <Row xs={1} md={2} lg={3} className=" p-2 m-2">
           <Col>
      

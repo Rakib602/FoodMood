@@ -6,7 +6,7 @@ const ManageOrder = () => {
     
 
     useEffect(() => {
-         fetch("http://localhost:4000/allorderd")
+         fetch("https://quiet-crag-48473.herokuapp.com/allorderd")
            .then((res) => res.json())
            .then((data) => setOrderd(data));
         
@@ -18,7 +18,7 @@ const ManageOrder = () => {
          "Are you sure to delete this menu??"
        );
        if (confirmDelete) {
-         fetch(`http://localhost:4000/allorderd${id}`, {
+         fetch(`https://quiet-crag-48473.herokuapp.com/allorderd${id}`, {
            method: "DELETE",
          })
            .then((res) => res.json())

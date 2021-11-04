@@ -13,7 +13,7 @@ const MyOrder = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:4000/allorderd/${user.email}`)
+        fetch(`https://quiet-crag-48473.herokuapp.com/allorderd/${user.email}`)
           .then((res) => res.json())
           .then((data) => setMyOrder(data));
         
@@ -23,7 +23,7 @@ const MyOrder = () => {
       const confirmDelete = window.confirm(
         'Are you sure to delete this menu??')
         if (confirmDelete) {
-            fetch(`http://localhost:4000/allorderd${id}`, {
+            fetch(`https://quiet-crag-48473.herokuapp.com/allorderd${id}`, {
               method: "DELETE",
             })
               .then((res) => res.json())

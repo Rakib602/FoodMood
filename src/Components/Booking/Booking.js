@@ -39,7 +39,7 @@ const Booking = () => {
           quantity,
         
         };
-        fetch("http://localhost:4000/orders", {
+        fetch("https://quiet-crag-48473.herokuapp.com/orders", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -62,7 +62,7 @@ const Booking = () => {
 
 
     useEffect(()=> {
-        fetch("http://localhost:4000/foods")
+        fetch("https://quiet-crag-48473.herokuapp.com/foods")
           .then((res) => res.json())
           .then((data) => setOrders(data));
     },[])
