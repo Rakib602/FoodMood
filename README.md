@@ -18,7 +18,11 @@ Mainly our site specially made for Food delivary service.
 
 ### What is our special Thing !!
 
-You order food by this site. You also see your oder in my order tab. You also see all the order in manage order tab. You also add food menu by using add menu tab. You also delete your order and other order also. All funciton are working if you want to use it first login in it then you use it. Without login you don't use it.   
+•	This is a Food Selling website. 
+•	User can see their oder in my order tab. 
+•	User can see all the order in manage order tab. 
+•	User also add food menu by using add menu tab and also delete user order and other order also. 
+•	All funciton are working if user want to use it first login in it then user use it. Without login user don't use it.   
 
 
 # If You Ordered it  , Your get best service from us !!
